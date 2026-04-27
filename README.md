@@ -51,10 +51,3 @@ Además, al pasar el mouse sobre cada lote se visualiza información detallada c
 3. Colorea automáticamente cada parcela en el mapa.
 4. Al posicionar el cursor sobre un lote, muestra su información.
 
-## 🛠️ Posibles mejoras futuras
-
-- Responsive para mobile  
-- Filtros por estado  
-- Buscador de lote por número  
-- Panel administrativo  
-- Animaciones más avanzadas  
