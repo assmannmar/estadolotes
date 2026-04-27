@@ -85,17 +85,17 @@
           let anticipo = 0;
           let ventana = document.getElementById('detalle');
           if (loteFound[4] == "Disponible") {
-             valor = loteFound[5];
-             anticipo = loteFound[6];
-             cuotas = loteFound[7]
+            valor = loteFound[5];
+            anticipo = loteFound[6];
+            cuotas = loteFound[7];
+            ventana.innerHTML = "<p> Lote: <b>" + loteFound[0] + " </b></p> <p> Superficie: <b>" + loteFound[1] + " m2</b></p> <p> Calado: <b>" + loteFound[2] + " m</b></p> <p> Metros de Costa: <b>" + loteFound[3] + " m</b></p> <p> Estado: <b>" + loteFound[4] + " </b></p> <p> Valor: <b>" + valor + " </b></p> <p> Anticipo desde: <b> US$ 15,000 </b></p> <p> Saldo en hasta: <b> 48 cuotas </b></p>";
+            ventana.style.visibility = "visible";
           }  
           else {  
-            valor = "";
-            anticipo = "";
-            cuotas = ""
+            ventana.innerHTML = "<p> Lote: <b>" + loteFound[0] + " </b></p> <p> Superficie: <b>" + loteFound[1] + " m2</b></p> <p> Calado: <b>" + loteFound[2] + " m</b></p> <p> Metros de Costa: <b>" + loteFound[3] + " m</b></p> <p> Estado: <b>" + loteFound[4] + "</b></p>";
+            ventana.style.visibility = "visible";
           };
-          ventana.innerHTML = "<p> Lote: <b>" + loteFound[0] + " </b></p> <p> Superficie: <b>" + loteFound[1] + " m2</b></p> <p> Calado: <b>" + loteFound[2] + " m</b></p> <p> Metros de Costa: <b>" + loteFound[3] + " m</b></p> <p> Estado: <b>" + loteFound[4] + " </b></p> <p> Valor: <b>" + valor + " </b></p> <p> Anticipo desde: <b> US$ 15,000 </b></p> <p> Saldo en hasta: <b> 48 cuotas </b></p>";
-          ventana.style.visibility = "visible";
+          
 
         });
       });
@@ -118,10 +118,6 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;493;700&display=swap');
 
-    body {
-      margin: 0;
-      overflow-x: hidden; /* Evita scrolls laterales molestos */
-    } 
 
     svg {
       margin-bottom: 200px;
@@ -144,9 +140,7 @@
     }
 
     #svgmain {
-      width: 100%;       /* Para que no se desborde */
-      height: auto;      /* Mantiene la proporción */
-      display: block;
+      z-index: 1;
     }
 
     #loader-container{
@@ -199,7 +193,7 @@
   </div>
 
 
-<svg id="svgmain" width="100%" height="auto" version="1.1" viewBox="0 0 704 424.96" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg id="svgmain" width="2200" height="1328" version="1.1" viewBox="0 0 704 424.96" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
   <g id="g841">
       <image id="image843" width="704" height="424.96" preserveAspectRatio="none" xlink:href="islas-masterplan.jpg"/>
   <g fill="currentcolor" stroke="#000">
